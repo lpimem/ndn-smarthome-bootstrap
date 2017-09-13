@@ -29,4 +29,18 @@
 # Executables
 *.exe
 *.out
+
+# IDE and build tools
 *.app
+*.xcodeproj
+.vscode
+.idea
+build
+**/*.swp
+**/*.log
+*.pyc
+.lock-waf_*
+.waf-1.8.9-*
+
+# project specific
+tools 

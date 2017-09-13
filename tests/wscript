@@ -1,0 +1,47 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+
+# top = ".."
+
+
+def build(bld):
+  if bld.env['WITH_TESTS']:
+    
+    # bld(
+    #   target="../unit_tests", 
+    #   features="cxx cxxprogram",
+    #   source=bld.path.ant_glob(['unit-tests/**/*.cpp']),
+    #   includes = [".", ".."],
+    #   use="homesec-objcts"
+    # )
+
+    bld(
+      target="../unit_tests", 
+      features="cxx cxxprogram",
+      # source="main.cpp", 
+      source="unit-tests/util/security_helpers.t.cpp",
+      # use="unit_tests_objects",
+      use="homesec-objcts",
+      includes = ["."]
+    )
+
+    # bld(
+    #   target="../unit_tests", 
+    #   features="cxx cxxprogram",
+    #   # source="main.cpp", 
+    #   source="unit-tests/util/security_helpers.t.cpp",
+    #   # use="unit_tests_objects",
+    #   use="homesec-objcts",
+    #   includes = ["."]
+    # )
+
+    # bld(
+    #   target="unit_tests_objects",
+    #   name="unit_tests_objects",
+    #   features="cxx",
+    #   source=bld.path.ant_glob(['unit-tests/**/*.cpp']),
+    #   use="homesec-objcts",
+    #   includes=["."]
+    # )
+
+    
